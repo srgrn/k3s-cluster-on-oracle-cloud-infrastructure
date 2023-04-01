@@ -11,8 +11,10 @@ iptables -X
 
 netfilter-persistent save
 
-if [[ "$HOSTNAME" =~ "server_0" ]]; then
+if [[ "$HOSTNAME" =~ "server0" ]]; then
     curl -sfL https://get.k3s.io | K3S_TOKEN=${token} sh -s - server --cluster-init
 
 else
     curl -sfL https://get.k3s.io | K3S_TOKEN=${token} sh -s - server --server https://${server_0_ip}:6443
+
+fi

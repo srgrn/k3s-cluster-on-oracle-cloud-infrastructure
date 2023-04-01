@@ -8,14 +8,18 @@ variable "fingerprint" {
   type        = string
 }
 
-variable "private_key" {
-  description = "Private key to use for signing"
-  type        = string
-}
+# variable "private_key" {
+#   description = "Private key to use for signing"
+#   type        = string
+# }
 
-variable "private_key_password" {
-  description = "Password for private key to use for signing"
-  type        = string
+# variable "private_key_password" {
+#   description = "Password for private key to use for signing"
+#   type        = string
+# }
+
+variable "private_key_path" {
+  default = ""
 }
 
 variable "region" {

@@ -1,19 +1,3 @@
-terraform {
-  required_version = ">= 1.0.0"
-  required_providers {
-    oci = {
-      source  = "oracle/oci"
-      version = ">= 3.70.0"
-      source  = "oracle/oci"
-    }
-  }
-}
-
-provider "oci" {
-  private_key          = var.private_key
-  private_key_password = var.private_key_password
-}
-
 module "network" {
   source = "./network"
 
